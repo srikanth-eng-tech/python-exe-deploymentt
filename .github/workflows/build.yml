@@ -23,9 +23,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install pyinstaller
 
-      - name: Build EXE
+      - name: Build GUI EXE
         run: |
-          pyinstaller --onefile src/app.py --name myapp
+          pyinstaller --onefile --windowed src/app.py --name myapp
 
       - name: Publish EXE to GitHub Release
         uses: ncipollo/release-action@v1
@@ -35,6 +35,7 @@ jobs:
           artifacts: dist/myapp.exe
           allowUpdates: true
           replacesArtifacts: true
-          body: Automatic EXE build
+          body: Automatic GUI EXE build
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
