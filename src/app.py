@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import messagebox
 
 def on_click():
-    messagebox.showinfo("Message", "Hello! This GUI EXE was built automatically.")
+    messagebox.showinfo("Message", "Hello! GUI EXE was built automatically.")
 
 root = tk.Tk()
 root.title("My GUI App")
